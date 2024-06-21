@@ -148,6 +148,13 @@ input[type='checkbox']:checked {
 .a4 {
   margin-top: 10%;
 }
+.career{
+  font-size: medium;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.card-title{
+  font-family: Arial, Helvetica, sans-serif;
+}
 
 @media (max-width: 991px) {
   .a4 {
