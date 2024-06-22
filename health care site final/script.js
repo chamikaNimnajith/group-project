@@ -151,10 +151,10 @@ function validateEmail(input, requiredMsg, invalidMsg) {
 }
 
 const NAME_REQUIRED = 'please enter the user name';
-const EMAIL_REQUIRED = 'please enter your email';
+const EMAIL_REQUIRED = ' enter your email';
 const EMAIL_INVALID = 'please enter a correct email address format ';
-const PASSWORD_REQUIRED = 'please enter the password';
-const PASSWORD_REQUIREDC = 'please confirm the password';
+const PASSWORD_REQUIRED = ' enter the password';
+const PASSWORD_REQUIREDC = ' confirm the password';
 const PASSWORD_REQUIREDC8 = 'minimal 8 characters need';
 const PASSWORD_REQUIREDC8M = 'its not match with first one';
 
