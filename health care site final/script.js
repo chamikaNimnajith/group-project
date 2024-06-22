@@ -105,9 +105,32 @@ function showSuccess(input) {
   return showMessage(input, '', true);
 }
 
+
 function hasValue(input, message) {
   if (input.value.trim() === '') {
     return showError(input, message);
+  }
+
+  return showSuccess(input);
+}
+
+function password(input, message, invalidMsg) {
+  if (input.value.trim() === '') {
+    return showError(input, message);
+  }
+  if (0<input.value.length && input.value.length <8) {
+    return showError(input, invalidMsg);
+  }
+
+  return showSuccess(input);
+}
+
+function passwordc(input2,input, message, invalidMsg) {
+  if (input.value.trim() === '') {
+    return showError(input, message);
+  }
+  if (input2.value !== input.value) {
+    return showError(input, invalidMsg);
   }
 
   return showSuccess(input);
@@ -131,6 +154,9 @@ const NAME_REQUIRED = 'please enter the user name';
 const EMAIL_REQUIRED = 'please enter your email';
 const EMAIL_INVALID = 'please enter a correct email address format ';
 const PASSWORD_REQUIRED = 'please enter the password';
+const PASSWORD_REQUIREDC = 'please confirm the password';
+const PASSWORD_REQUIREDC8 = 'minimal 8 characters need';
+const PASSWORD_REQUIREDC8M = 'its not match with first one';
 
 const form = document.querySelector('#SIGNUP');
 form.addEventListener('submit', function (e) {
@@ -142,10 +168,15 @@ form.addEventListener('submit', function (e) {
     EMAIL_REQUIRED,
     EMAIL_INVALID
   );
-  let passwordValid = hasValue(form.elements['PASSWORD'], PASSWORD_REQUIRED);
+  let passwordValid = password(form.elements['PASSWORD'], PASSWORD_REQUIRED,PASSWORD_REQUIREDC8);
+  let passwordValidc = passwordc(form.elements['PASSWORD'],form.elements['PASSWORDC'], PASSWORD_REQUIREDC,PASSWORD_REQUIREDC8M);
 
-  if (nameValid && emailValid && passwordValid) {
+  if (nameValid && emailValid && passwordValid && passwordValidc) {
     alert('හරිනෙ දැක්කනේ. මේකට php ලියල නෑ. ඒකහින්ද දැන් ඔක cut කරල දාන්න😂😂');
     form.reset();
   }
 });
+
+
+
+
