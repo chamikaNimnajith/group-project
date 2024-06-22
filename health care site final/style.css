@@ -14,7 +14,7 @@
   
 }
 .Sb {
-  background-color: #05a039;
+  background-color: #0bb3c5;
 }
 
 .blur {
@@ -25,7 +25,7 @@ input[type='checkbox']:checked {
 }
 
 input:valid{
-    border: solid 1px green;
+    border: solid 1px rgb(17, 139, 170);
 }
 /* .b1 {
   border-top-left-radius: 17px;
@@ -447,7 +447,7 @@ input[type='radio'] {
   transition: 0.1s;
 }
 #btns:hover{
-  background-color: rgb(18, 147, 239);
+  background-color: rgb(7, 109, 150);
 }
 
 
