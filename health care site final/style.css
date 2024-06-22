@@ -1,5 +1,5 @@
 .login-btn {
-  background-color: #009970;
+  background-color: #08afc5;
   color: #fff;
   font-size: 14px;
   padding: 8px 20px;
@@ -8,9 +8,9 @@
   transition: 0.6s ;
 }
 .login-btn:hover{
-  background-color: rgb(45, 170, 243);
+  background-color: rgb(8, 132, 163);
   transform: scale(1.1);
-  color: black;
+  color: rgb(255, 255, 255);
   
 }
 .Sb {
@@ -44,7 +44,7 @@ input:valid{
 }
 
 .navbar-brand {
-  color: #05a039;
+  color:gray;
   font-size: 24px;
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: 30px;
@@ -173,7 +173,8 @@ input:valid{
 }
 
 .footer .container .row .col-2 a {
-  color: #009970;
+  color: gray;
+  text-decoration: none
   
 }
 
@@ -295,14 +296,14 @@ input[type='radio'] {
   text-decoration: none;
   font-size: 1.1rem;
   color: #fff;
-  background-color: #05a039;
-  padding: 15px 30px;
+  background-color: #02c6c3;
+  padding: 10px 30px;
   transition: all 0.3s ease-in;
   border-radius: 20px;
 }
 
 .slide .desc a:hover {
-  background-color: #000;
+  background-color: #03628e;
   color: #fff;
   border-radius: 20px;
 }
