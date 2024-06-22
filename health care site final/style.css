@@ -54,6 +54,17 @@ input:valid{
 /* .login-btn:hover {
   background-color: #00b383;
 } */
+.main {
+  background-color: #CED4DA;
+}
+.main2{
+  background-color: #CED4DA;
+
+}
+.footer{
+  background-color: #fdfdfd;
+}
+
 
 .navbar-toggler {
   border: none;
@@ -194,7 +205,7 @@ input:valid{
 body {
   height: 100vh;
   width: 100%;
-  background-color: #e9ece9;
+  background-color: #f5f6f5;
 }
 
 input[type='radio'] {
