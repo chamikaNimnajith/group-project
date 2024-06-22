@@ -5,7 +5,13 @@
   padding: 8px 20px;
   border-radius: 50px;
   text-decoration: none;
-  transition: 0.3s background-color;
+  transition: 0.6s ;
+}
+.login-btn:hover{
+  background-color: rgb(45, 170, 243);
+  transform: scale(1.1);
+  color: black;
+  
 }
 .Sb {
   background-color: #05a039;
@@ -428,6 +434,19 @@ input[type='radio'] {
   transform: translateY(0px);
   opacity: 1;
 }
+.card {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
 
+.card:hover {
+  transform: translateY(-10px); /* Move the card up */
+  box-shadow: 0 10px 20px rgb(117, 208, 234); /* Add a shadow effect */
+}
+#btns{
+  transition: 0.1s;
+}
+#btns:hover{
+  background-color: rgb(18, 147, 239);
+}
 
 
