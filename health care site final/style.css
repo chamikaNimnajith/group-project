@@ -44,9 +44,9 @@ input:valid{
 }
 
 .navbar-brand {
-  color: #009970;
+  color: #05a039;
   font-size: 24px;
-  font-family: fantasy;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: 30px;
   transition: 0.3s color;
 }
@@ -296,9 +296,9 @@ input[type='radio'] {
   font-size: 1.1rem;
   color: #fff;
   background-color: #05a039;
-  padding: 15px 40px;
+  padding: 15px 30px;
   transition: all 0.3s ease-in;
-  border-radius: 15px;
+  border-radius: 20px;
 }
 
 .slide .desc a:hover {
