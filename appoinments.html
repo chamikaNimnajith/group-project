@@ -96,6 +96,7 @@
           <div class="col-md-4">
             <label for="validationCustom01" class="form-label">Your Name</label>
             <input
+              id="validationCustom01"
               type="text"
               class="form-control"
               style="font-size: 13px"
@@ -106,7 +107,7 @@
           </div>
           <div class="col-md-4">
             <label for="validationCustom02" class="form-label">Email</label>
-            <input type="email" class="form-control" style="font-size: 13px"
+            <input id="validationCustom02" type="email" class="form-control" style="font-size: 13px"
             required pattern=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
             maxlength="50" />
           </div>
@@ -122,6 +123,7 @@
                 >+94</span
               >
               <input
+                id="validationCustomUsername"
                 type="number"
                 class="form-control"
                 style="font-size: 13px"
@@ -134,6 +136,7 @@
               >Doctor Name</label
             >
             <input
+              id="validationCustom03"
               type="text"
               class="form-control"
               style="font-size: 13px"
@@ -168,6 +171,7 @@
               >Date & Time</label
             >
             <input
+              id="validationCustom05"
               type="text"
               class="form-control"
               style="font-size: 13px"
@@ -306,7 +310,7 @@
 
     <!-- Confirmation Popup -->
         <div id="confirmationPopup" style="display:none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; border: 1px solid #ccc; padding: 20px; box-shadow: 0px 0px 10px rgba(0,0,0,0.1);">
-          <p>Thank you for booking your appointment!</p>
+          <h4><b>Thank you for booking your appointment!</b></h4>
           <p id="appointmentDetails"></p>
           <button id="closePopup" style="background-color: rgb(9, 174, 174); color: white; border: none; padding: 10px 20px; cursor: pointer;">Close</button>
         </div>
@@ -319,12 +323,12 @@
             event.preventDefault(); 
             
             
-            var name = $('input[placeholder="Your Name"]').val();
-            var email = $('input[placeholder="Email"]').val();
-            var whatsapp = $('input[placeholder="WhatsApp Number"]').val();
-            var doctorName = $('input[placeholder="Doctor Name"]').val();
+            var name = $('#validationCustom01').val();
+            var email = $('#validationCustom02').val();
+            var whatsapp = $('#validationCustomUsername').val();
+            var doctorName = $('#validationCustom03').val();
             var specialization = $('#validationCustom04').val();
-            var dateTime = $('input[placeholder="Date & Time"]').val();
+            var dateTime = $('#validationCustom05').val();
             
             
             var details = '<strong>Name:</strong> ' + name + '<br>' +
