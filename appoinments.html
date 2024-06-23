@@ -92,7 +92,7 @@
         <div class="text-center py-5 mb-1 mt-4">
           <h2 style="color: rgb(7, 161, 161);">Make Your Appoinment</h2>
         </div>
-        <form class="row g-3 needs-validation" style="font-size: 13px;">
+        <form id="appointmentForm" class="row g-3 needs-validation" style="font-size: 13px;">
           <div class="col-md-4">
             <label for="validationCustom01" class="form-label">Your Name</label>
             <input
@@ -206,6 +206,7 @@
           <thead>
             <tr>
               <th scope="col" style="border-top-left-radius: 10px"></th>
+              <th scope="col">Doctor Name</th>
               <th scope="col">Specialist</th>
               <th scope="col" style="border-top-right-radius: 10px">Time</th>
             </tr>
@@ -213,26 +214,31 @@
           <tbody>
             <tr>
               <td>Monday</td>
+              <td>Chamika Nimnajith</td>
               <td>Cardiology & Dermatology</td>
               <td>2.00PM - 8.00PM</td>
             </tr>
             <tr>
               <td>Tuesday</td>
+              <td>Thamara Bhagya</td>
               <td>Endocrinology</td>
               <td>3.00PM - 8.00PM</td>
             </tr>
             <tr>
               <td>Wednsday</td>
+              <td>Vinod Uthshan</td>
               <td>Gastroenterology & Pediatrics</td>
               <td>3.00PM - 8.00PM</td>
             </tr>
             <tr>
               <td>Thursday</td>
+              <td>Kavishka Dilshan</td>
               <td>Neurology & Psychiatry</td>
               <td>2.00PM - 10.00PM</td>
             </tr>
             <tr>
               <td>Friday</td>
+              <td>Kasun Fernando</td>
               <td>Ophthalmology & Pulmonology</td>
               <td>3.00PM - 8.00PM</td>
             </tr>
@@ -297,7 +303,48 @@
       </div>
     </section>
 
+    <!-- Confirmation Popup -->
+        <div id="confirmationPopup" style="display:none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; border: 1px solid #ccc; padding: 20px; box-shadow: 0px 0px 10px rgba(0,0,0,0.1);">
+          <p>Thank you for booking your appointment!</p>
+          <p id="appointmentDetails"></p>
+          <button id="closePopup" style="background-color: rgb(9, 174, 174); color: white; border: none; padding: 10px 20px; cursor: pointer;">Close</button>
+        </div>
 
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+       $(document).ready(function() {
+            $('#appointmentForm').submit(function(event) {
+            event.preventDefault(); 
+            
+            
+            var name = $('input[placeholder="Your Name"]').val();
+            var email = $('input[placeholder="Email"]').val();
+            var whatsapp = $('input[placeholder="WhatsApp Number"]').val();
+            var doctorName = $('input[placeholder="Doctor Name"]').val();
+            var specialization = $('#validationCustom04').val();
+            var dateTime = $('input[placeholder="Date & Time"]').val();
+            
+            
+            var details = '<strong>Name:</strong> ' + name + '<br>' +
+                          '<strong>Email:</strong> ' + email + '<br>' +
+                          '<strong>WhatsApp:</strong> ' + whatsapp + '<br>' +
+                          '<strong>Doctor:</strong> ' + doctorName + '<br>' +
+                          '<strong>Specialization:</strong> ' + specialization + '<br>' +
+                          '<strong>Date & Time:</strong> ' + dateTime;
+            $('#appointmentDetails').html(details);
+            
+            
+            $('#confirmationPopup').show();
+          });
+
+          
+          $('#closePopup').click(function() {
+            $('#confirmationPopup').hide();
+          });
+        });
+    </script>
+    
     <script src="script.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
