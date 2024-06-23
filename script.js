@@ -180,7 +180,7 @@ form.addEventListener('submit', function (e) {
   );
 
   if (nameValid && emailValid && passwordValid && passwordValidc) {
-    alert('හරිනෙ දැක්කනේ. මේකට php ලියල නෑ. ඒකහින්ද දැන් ඔක cut කරල දාන්න😂😂');
+    alert('දැන් ඔක cut කරල දාන්න😂😂');
     form.reset();
   }
 });
