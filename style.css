@@ -391,11 +391,70 @@ input[type='radio'] {
     transform: translate(-50%, -50%);
   }
 }
+.zzzzz{
+  display: none;
+}
+.zzz{
+  display: none;
+}
+.ttt{
+    font-size: 20px;
+   }
 
 @media(max-width:389px){
   .login-btn{
     display:none ;
   }
+}
+@media(max-width:423px){
+  .z{
+    display:none ;
+  }
+}
+@media(max-width:991px){
+  .zz{
+    line-height: 14px;
+  }
+  .zzz{
+    display: block;
+  }
+  .zzzz{
+    display: none;
+  }
+}
+
+@media(max-width:471px){
+   .zz{
+    font-size: 10px;
+   }
+
+   .tt{
+    font-size: 14px;
+   }
+   .ttt{
+    font-size: 15px;
+   }
+}
+
+@media(max-width:504px){
+  .zzzzz{
+    display:block ;
+  }
+   .zzz{
+    display: none;
+  }
+  .zzzz{
+    display: none;
+  }
+}
+
+.tt{
+  height:45px;
+}
+@media(max-width:376px){
+   .tt{
+    height: 30px;
+   }
 }
 
 @media(max-width:991px){

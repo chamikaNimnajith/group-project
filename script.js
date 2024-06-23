@@ -105,7 +105,6 @@ function showSuccess(input) {
   return showMessage(input, '', true);
 }
 
-
 function hasValue(input, message) {
   if (input.value.trim() === '') {
     return showError(input, message);
@@ -118,14 +117,14 @@ function password(input, message, invalidMsg) {
   if (input.value.trim() === '') {
     return showError(input, message);
   }
-  if (0<input.value.length && input.value.length <8) {
+  if (0 < input.value.length && input.value.length < 8) {
     return showError(input, invalidMsg);
   }
 
   return showSuccess(input);
 }
 
-function passwordc(input2,input, message, invalidMsg) {
+function passwordc(input2, input, message, invalidMsg) {
   if (input.value.trim() === '') {
     return showError(input, message);
   }
@@ -168,15 +167,21 @@ form.addEventListener('submit', function (e) {
     EMAIL_REQUIRED,
     EMAIL_INVALID
   );
-  let passwordValid = password(form.elements['PASSWORD'], PASSWORD_REQUIRED,PASSWORD_REQUIREDC8);
-  let passwordValidc = passwordc(form.elements['PASSWORD'],form.elements['PASSWORDC'], PASSWORD_REQUIREDC,PASSWORD_REQUIREDC8M);
+  let passwordValid = password(
+    form.elements['PASSWORD'],
+    PASSWORD_REQUIRED,
+    PASSWORD_REQUIREDC8
+  );
+  let passwordValidc = passwordc(
+    form.elements['PASSWORD'],
+    form.elements['PASSWORDC'],
+    PASSWORD_REQUIREDC,
+    PASSWORD_REQUIREDC8M
+  );
 
   if (nameValid && emailValid && passwordValid && passwordValidc) {
     alert('හරිනෙ දැක්කනේ. මේකට php ලියල නෑ. ඒකහින්ද දැන් ඔක cut කරල දාන්න😂😂');
     form.reset();
   }
 });
-
-
-
 
