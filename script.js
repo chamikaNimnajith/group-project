@@ -189,6 +189,19 @@ form.addEventListener('submit', function (e) {
 
 
 
-      
+       let datetime = document.getElementById('datetime');
+
+       setInterval(() => {
+         let d = new Date();
+         datetime.innerHTML =
+           d.toLocaleTimeString() +
+           '  ' +
+           d.getDate() +
+           '/' +
+           (d.getMonth() + 1) +
+           '/' +
+           d.getFullYear();
+       }, 1000);
+
       
 
