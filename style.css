@@ -491,6 +491,10 @@ input[type='radio'] {
 #btns:hover{
   background-color: rgb(7, 109, 150);
 }
+.star .material-icons{
+  font-size: 16px;
+  color: rgba(38, 176, 214, 0.954);
+}
 /* .offcanvas-header{
   background-color: #02c6c3;
 }  */
