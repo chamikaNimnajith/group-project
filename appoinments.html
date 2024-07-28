@@ -22,6 +22,8 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
   </head>
 
   <body class="main2">
@@ -177,6 +179,20 @@
               style="font-size: 13px"
               required
             />
+          </div>
+          <div>
+            <P>Date and Time with Indian standart Zone: <Zone p id="d1"></Zone></P>
+            <Script>
+              function showdate(){
+                let date1 = new Date();
+                let date2 = date1.toLocaleDateString();
+                let time2 = date1.toLocaleTimeString();
+
+                $("#d1").text(`${date2} and ${time2}`);
+
+              }
+              setInterval(showdate);
+            </Script>
           </div>
           <div class="col-12">
             <div class="form-check">
